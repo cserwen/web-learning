@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>第十次作业</title>
+    <script type="text/javascript">
+        function showPicture() {
+            let sel = document.getElementById("diffPic");
+            let show = document.getElementById("showPic");
+            let index = sel.selectedIndex;
+            show.src = sel.options[index].value;
+        }
+    </script>
+    <script type="text/javascript">
+        function isTrue() {
+            let quest1 = document.getElementsByName("ques1");
+            let score = 0;
+            for (let i = 0; i < quest1.length; i++) {
+                if (quest1[i].checked){
+                    if (i === 2){
+                        score+=5;
+                    }
+                }
+            }
+
+            let quest2 = document.getElementsByName("ques2");
+            for (let i = 0; i < quest2.length; i++) {
+                if (quest2[i].checked){
+                    if (i === 3){
+                        score+=5;
+                    }
+                }
+            }
+
+            alert("你的得分为"+score+"分");
+        }
+    </script>
+</head>
+
+<body>
+<div id="test1" style="padding-left: 50px">
+    <h3>显示图片</h3>
+    <form>
+        <select id="diffPic" onclick="showPicture()" style="width: 100px">
+            <option value="../picture/usp.png">usp手枪</option>
+            <option value="../picture/M4A4.png">M4A4</option>
+            <option value="../picture/glock.png">格洛克手枪</option>
+            <option value="../picture/deagle.png">沙漠之鹰</option>
+            <option value="../picture/AWP.png">AWP狙击枪</option>
+            <option value="../picture/Ak47.png">AK-47步枪</option>
+        </select>
+    </form>
+
+    <p style="width: 400px; height: 400px">
+        <img src="../picture/usp.png" id="showPic" style="width: 400px; height: 400px">
+    </p>
+</div>
+<hr/>
+<div id="test2" style="padding-left: 50px">
+    <h3>回答问题（每小题5分）</h3>
+    <form onsubmit="isTrue()" method="get">
+        <p>（1）以下选项中，鼠标单击事件对应的事件句柄是（ ）</p>
+        <label>
+            <input type="radio" name="ques1" value="1">A.onChange</label>
+        <label>
+            <input type="radio" name="ques1" value="2">B.onLoad</label>
+        <label>
+            <input type="radio" name="ques1" value="3">C.onClick</label>
+        <label>
+            <input type="radio" name="ques1" value="4">D.onDblClick</label>
+        <p>（2）以下事件中，当页面的文本输入框获得焦点时触发的事件是（ ）。</p>
+        <label>
+            <input type="radio" name="ques2" value="1">A.click</label>
+        <label>
+            <input type="radio" name="ques2" value="2">B.load</label>
+        <label>
+            <input type="radio" name="ques2" value="3">C.blur</label>
+        <label>
+            <input type="radio" name="ques2" value="4">D.focus</label>
+        <br/>
+        <input type="submit", value="提交" style="margin-top: 20px">
+    </form>
+</div>
+</body>
+
+</html>

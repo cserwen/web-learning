@@ -1,0 +1,181 @@
+body{
+    margin-top: 20px;
+    margin-left: 320px;
+    margin-right: 320px;
+    background: #aaaaaa;
+}
+
+
+#menu{
+    margin: 0 auto;
+    text-align: center;
+    width: 1280px;
+    height: 40px;
+    background: #ffffff;
+    border: 1px solid #333333;
+    position: absolute;
+    z-index: 1;
+}
+
+#menu ul{
+    margin: 5px;
+    padding-left: 0px;
+}
+
+#submenu
+{
+    width: 140px;
+    height: 30px;
+    text-align: center;
+    z-index: inherit;
+}
+
+#menu ul li{
+    height: 40px;
+    width: 12.5%;
+    list-style: none;
+    float: left;
+    display: inline;
+    font: 0.9em Arial, sans-serif;
+    text-align: center;
+ }
+
+ul li a{
+    color: #000000;
+    width: 100%;
+    margin: 0px;
+    padding: 0px 0px 0px 8px;
+    text-decoration: none;
+    display: block;
+    background: #ffffff;
+    line-height: 30px;
+}
+ul li #submenu ul li{
+    height: 30px;
+}
+
+ul li #submenu ul li a{
+    line-height: 30px;
+}
+
+ul li a:hover{
+    background: #666;
+    color: white;
+}
+
+ul li #submenu{
+    display: none;
+}
+
+#submenu ul li{
+    height: 30px;
+    width: 100%;
+    list-style: none;
+    float: left;
+    display: block;
+    font: 0.9em Arial, Sans-Serif;
+    text-align: center;
+}
+ul li:hover #submenu{
+    display: inline;
+}
+
+ul li #submenu ul li:hover{
+    color: #666666;
+}
+
+#picture{
+    width: 1280px;
+    height: 720px;
+    overflow: hidden;
+    z-index: 0;
+}
+
+#pic{
+    width: 6400px;
+    animation: switch 15s ease-out infinite;
+}
+
+#pic img {
+    float: left;
+    width: 1280px;
+    height: 720px;
+}
+
+@keyframes switch {
+    0%, 12% {
+        margin-left: 0;
+    }
+    20%, 35% {
+        margin-left: -1280px;
+    }
+    45%, 55% {
+        margin-left: -2560px;
+    }
+    65%, 75% {
+        margin-left: -3840px;
+    }
+    85%, 100% {
+        margin-left: -5120px;
+    }
+
+}
+
+#footer{
+    width: 1280px;
+    height:  450px;
+}
+
+#left{
+    background: #ffffff;
+    height: inherit;
+    width: 640px;
+    display: inline;
+    float: left;
+}
+
+#right{
+    background: #000000;
+    width: 640px;
+    height: inherit;
+    display: inline;
+    float: left;
+}
+
+#left h2{
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+#right h2{
+    margin-left: 50px;
+    margin-top: 20px;
+    color: white;
+}
+
+#homework_done{
+    margin-left: 50px;
+    margin-top: 10px;
+    margin-right: 100px;
+    list-style: none;
+}
+
+#homework_undo{
+    background: #000000;
+    margin-left: 50px;
+    margin-top: 10px;
+    margin-right: 100px;
+    list-style: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+

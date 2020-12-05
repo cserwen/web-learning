@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第九次作业</title>
+    <script type="text/javascript">
+        function testInfo(message) {
+            alert(message);
+        }
+    </script>
+    <script type="text/javascript">
+        function clickHandler() {
+            alert("代码触发事件，即将提交表单");
+            return;
+        }
+    </script>
+    <script language="JavaScript">
+        function showName() {
+            if (document.form1.name1.value===""){
+                alert("没有输入内容");
+                return false;
+            }else {
+                alert("欢迎你！" + document.form1.name1.value);
+                return true;
+            }
+
+        }
+    </script>
+    <style>
+        fieldset{width: 300px}
+    </style>
+    <script language="JavaScript">
+        function isLegal() {
+            let lengthOfId = document.getElementById("name2").value.length;
+            let lengthOfPassword = document.getElementById("password").value.length;
+            if ( lengthOfId<=20 && lengthOfId>=8){
+
+            }
+            else{
+                alert("用户名不合法，请重新输入！");
+                document.getElementById("name2").focus();
+                return false;
+            }
+            if (lengthOfPassword<=20 && lengthOfPassword>=8){
+
+            }
+            else{
+                alert("密码不合法，请重新输入！");
+                document.getElementById("password").focus();
+                return false;
+            }
+
+            return true;
+        }
+    </script>
+</head>
+<body>
+    <div>
+        <h3>例题15-1-1</h3>
+        <form method="post" action="">
+            <input type="button" value="通过Js语句输出信息" onclick="alert('使用alert()输出信息')">
+            <input type="button" value="通过函数输出信息" onclick="testInfo('使用testInfo()输出信息')">
+        </form>
+    </div>
+    <hr/>
+    <div>
+        <h3>例题15-1-2</h3>
+        <form name="myform" method="post" action="">
+            <input id="inp" type="button" name="myButton" value="提交">
+        </form>
+        <script type="text/javascript">
+            document.getElementById('inp').onclick = function () {
+                return clickHandler();
+            }
+            myForm.myButton.onclick();
+        </script>
+    </div>
+    <hr/>
+    <div>
+        <h3>例题15-1-3</h3>
+        <script type="text/javascript" for="window" event="onload">
+            alert("网页读取完成，欢饮光临！");
+        </script>
+    </div>
+    <hr/>
+    <div>
+        <h3>例题15-1-4</h3>
+        <form name="form1" action="simple.html" onsubmit="return showName()">
+            <label>姓名：<input type="text" name="name1"></label>
+            <input type="submit" value="提交">
+        </form>
+    </div>
+    <hr/>
+    <div>
+        <h3>用户登录界面</h3>
+        <form style="background: #663399; width: 340px;" action="simple.html" onsubmit="return isLegal()">
+            <fieldset>
+                <legend>用户登录</legend>
+                <div align="center">
+                    <label>用 户：<input type="text" id="name2" required></label><br/><br/>
+                    <label>密 码：<input type="password" id="password" required></label><br/><br/><br/>
+                    <input type="submit" value="提交" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="reset" value="重置">
+                </div>
+            </fieldset>
+        </form>
+    </div>
+</body>
+</html>

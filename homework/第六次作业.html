@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第六次作业</title>
+    <script type="text/javascript">
+        function message1() {
+            alert("head标记中的脚本");
+        }
+    </script>
+    <script type="text/javascript" src="第六次作业.js">
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        document.write("body标记中的脚本");
+    </script>
+
+    <form>
+        <input name="s" type="button" onclick="message1();"
+        value="head">
+        <input name="J" type="button" onclick="message();"
+        value="js文件">
+        <input name="s" type="button" onclick="alert('事件处理代码中的脚本')" value="代码">
+    </form>
+</body>
+</html>

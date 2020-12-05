@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>第八次作业</title>
+    <style type="text/css">
+        table, th, td{border: black 1px solid;}
+        table{text-align: center;}
+        table caption{
+            margin: 15px;
+        }
+        .shop{
+            width: 300px;
+            height: 350px;
+        }
+        #func{
+            width: auto;
+            height: 100px;
+        }
+        .table_boot{
+            margin: 20px 50px;
+            width: 180px;
+            height: 45px;
+            border: 1px ridge #666666;
+            font-size: large;
+        }
+    </style>
+    <script type="text/javascript" src="第八次作业.js"></script>
+</head>
+<body>
+    <form>
+        <table align="center">
+            <caption>CSGO游戏内饰品备选区</caption>
+            <tr>
+                <td class="shop">
+                    <img src="../picture/Ak47.png" width="250" height="250"><br/>
+                    <h4>AK47——二西莫夫</h4>
+                    <label><input type="checkbox" name="shop0" value="3500" onclick="checkShop(0,'shop0')">￥ 3500 </label><br/>
+                </td>
+                <td class="shop">
+                    <img src="../picture/AWP.png" width="250" height="250"><br/>
+                    <h4>AWP——巨龙传说</h4>
+                    <label><input type="checkbox" name="shop1" value="15000" onclick="checkShop(1,'shop1')">￥ 15000</label> <br/>
+                </td>
+                <td class="shop">
+                    <img src="../picture/M4A4.png" width="250" height="250"><br/>
+                    <h4>M4A4——咆哮</h4>
+                    <label><input type="checkbox" name="shop2" value="25000" onclick="checkShop(2,'shop2')">￥ 25000</label><br/>
+                </td>
+            </tr>
+            <tr>
+                <td class="shop">
+                    <img src="../picture/usp.png" width="250" height="250"><br/>
+                    <h4>usp——枪响人亡</h4>
+                    <label><input type="checkbox" name="shop3" value="2200" onclick="checkShop(3,'shop3')">￥ 2200 </label><br/>
+                </td>
+                <td class="shop">
+                    <img src="../picture/glock.png" width="250" height="250"><br/>
+                    <h4>格洛克18型——渐变之色 </h4>
+                    <label><input type="checkbox" name="shop4" value="2300" onclick="checkShop(4,'shop4')">￥ 2300 </label><br/>
+                </td>
+                <td class="shop">
+                    <img src="../picture/deagle.png" width="250" height="250"><br/>
+                    <h4>沙漠之鹰——炽烈之炎</h4>
+                    <label><input type="checkbox" name="shop5" value="800" onclick="checkShop(5,'shop5')">￥ 800 </label><br/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3" id="func">
+                    <input type="button" value="查看购物车" class="table_boot" onclick="car()">
+                    <input type="button" value="收银台结算" class="table_boot" onclick="checkOut()">
+                    <input type="button" value="初始化参数" class="table_boot" onclick="clearAll()">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
